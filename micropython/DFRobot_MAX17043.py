@@ -1,9 +1,9 @@
-import smbus
 import time
-import datetime
+
+from machine import I2C, Pin
 
 # Get I2C bus
-bus = smbus.SMBus(1)
+i2c = I2C(scl = Pin(22), sda = Pin(21), freq=400000)
 
 MAX17043_ADDR = 0x36
 MAX17043_VCELL = 0x02
@@ -54,15 +54,17 @@ class DFRobot_MAX17043():
     self.writeRegBits(MAX17043_CONFIG, 0, 0x01, 7)
   
   def write16(self, reg, dat):
-    buf = [dat >> 8, dat & 0x00ff]
-    bus.write_i2c_block_data(MAX17043_ADDR, reg, buf)
+    buf = bytearray(2)
+    buf[0] = dat >> 8
+    buf[1] = dat & 0x00ff
+    i2c.writeto_mem(MAX17043_ADDR, reg, buf)
     
   def read16(self, reg):
-    buf = bus.read_i2c_block_data(MAX17043_ADDR, reg, 2)
+    buf = i2c.readfrom_mem(MAX17043_ADDR, reg, 2)
     return ((buf[0] << 8) | buf[1])
   
   def writeRegBits(self, reg, dat, bits, offset):
     tmp = self.read16(reg)
     tmp = (tmp & (~(bits << offset))) | (dat << offset)
     self.write16(reg, tmp)
-  
+
