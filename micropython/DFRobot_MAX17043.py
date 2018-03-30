@@ -1,4 +1,4 @@
-import import smbus
+import smbus
 import time
 import datetime
 
@@ -21,11 +21,12 @@ class DFRobot_MAX17043():
   def begin(self):
     self.write16(MAX17043_COMMAND, 0x5400)
     time.sleep(0.01)
-    if self.read16(MAX17043_CONFIG) is 0x971c:
+    if self.read16(MAX17043_CONFIG) == 0x971c:
       self.write16(MAX17043_MODE, 0x4000)
+      time.sleep(0.01)
       self.write16(MAX17043_CONFIG, 0x9700)
       return 0
-    else
+    else:
       return -1
       
   def readVoltage(self):
@@ -38,9 +39,9 @@ class DFRobot_MAX17043():
   def setInterruptPrecentage(self, pre):
     if pre > 32:
       pre = 32
-    else if pre < 1:
+    elif pre < 1:
       pre = 1
-    pre = 32 - pre
+    pre = 32 - int(pre)
     self.writeRegBits(MAX17043_CONFIG, pre, 0x01f, 0)
 
   def clearInterrupt(self):
@@ -54,10 +55,10 @@ class DFRobot_MAX17043():
   
   def write16(self, reg, dat):
     buf = [dat >> 8, dat & 0x00ff]
-    bus.write_block_data(self.addr, reg, buf)
+    bus.write_i2c_block_data(MAX17043_ADDR, reg, buf)
     
   def read16(self, reg):
-    buf = bus.read_i2c_block_data(self.addr, reg, 2)
+    buf = bus.read_i2c_block_data(MAX17043_ADDR, reg, 2)
     return ((buf[0] << 8) | buf[1])
   
   def writeRegBits(self, reg, dat, bits, offset):
