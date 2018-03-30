@@ -4,7 +4,7 @@
 #include "Arduino.h"
 #include "Wire.h"
 
-#define _DBG        1
+#define _DBG        0
 
 #if(_DBG)
   #define _DBG_CODE(x)      x
@@ -28,12 +28,12 @@ class DFRobot_MAX17043 {
     int         begin();
     float       readVoltage();
     float       readPrecentage();
-    void        setInterruptPrecentage(float pre);
+    void        setInterrupt(float pre);
     void        clearInterrupt();
     void        setSleep();
     void        setWakeUp();
 
-  public:
+  private:
     //!!!     little ending
     void write16(uint8_t reg, uint16_t dat) {
       Wire.begin();

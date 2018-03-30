@@ -9,11 +9,10 @@ lipo = DFRobot_MAX17043()
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7, GPIO.IN)
+intFlag = 0
 
 def interruptCallBack(channel):
-  global lipo
-  lipo.clearInterrupt()
-  print('gpio interruptCallBack')
+  intFlag = 1
   
 GPIO.add_event_detect(7, GPIO.FALLING, callback = interruptCallBack, bouncetime = 5)
 
@@ -29,5 +28,9 @@ print('lipo config ' + str(hex(lipo.read16(0x0c))))
   
 while True:
   time.sleep(2)
-  print('read voltage: ' + str(lipo.readVoltage()) + 'mv')
-  print('read precentage: ' + str(lipo.readPrecentage()) + '%')
+  print('read voltage: ' + str(lipo.readVoltage()) + 'mV')
+  print('read precentage: ' + str(round(lipo.readPrecentage(), 2)) + '%')
+  if intFlag == 1:
+    intFlag = 0
+    lipo.clearInterrupt()
+    print('gpio interruptCallBack')

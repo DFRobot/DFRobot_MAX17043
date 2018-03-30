@@ -30,7 +30,7 @@ float DFRobot_MAX17043::readPrecentage()
   return (float)((pre >> 8) + 0.003906f * (pre & 0x00ff));
 }
 
-void DFRobot_MAX17043::setInterruptPrecentage(float pre)
+void DFRobot_MAX17043::setInterrupt(float pre)
 {
   uint16_t        temp;
   if(pre > 32.0f)
