@@ -5,6 +5,7 @@ lipo = DFRobot_MAX17043()
 intFlag = 0
 
 def interruptCallBack(channel):
+  global intFlag
   intFlag = 1
 
 pin_irq = Pin(25, Pin.IN)

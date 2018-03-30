@@ -12,6 +12,7 @@ GPIO.setup(7, GPIO.IN)
 intFlag = 0
 
 def interruptCallBack(channel):
+  global intFlag
   intFlag = 1
   
 GPIO.add_event_detect(7, GPIO.FALLING, callback = interruptCallBack, bouncetime = 5)
