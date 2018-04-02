@@ -32,26 +32,26 @@ $> python readAndInt.py
 
 ```python
 
-'''
+#
  # @brief create MAX17043 object
  #
  # @return MAX17043 object
-'''
+#
 DFRobot_MAX17043();
 
-'''
+#
  # @brief MAX17043 begin and test moudle
  #
  # @return result:        0: successful
  #                       -1: faild
-'''
+#
 def begin();
 
-'''
+#
  # @brief read battery voltage in mV
  #
  # @return voltage in mV
-'''
+#
 def readVoltage();
 
 '''
