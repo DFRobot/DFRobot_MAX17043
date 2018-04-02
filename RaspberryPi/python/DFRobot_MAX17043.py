@@ -36,7 +36,7 @@ class DFRobot_MAX17043():
     tmp = self.read16(MAX17043_SOC)
     return ((tmp >> 8) + 0.003906 * (tmp & 0x00ff))
 
-  def setInterruptpercentage(self, per):
+  def setInterrupt(self, per):
     if per > 32:
       per = 32
     elif per < 1:
