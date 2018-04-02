@@ -32,17 +32,17 @@ class DFRobot_MAX17043():
   def readVoltage(self):
     return (1.25 * (self.read16(MAX17043_VCELL) >> 4))
   
-  def readPrecentage(self):
+  def readPercentage(self):
     tmp = self.read16(MAX17043_SOC)
     return ((tmp >> 8) + 0.003906 * (tmp & 0x00ff))
 
-  def setInterruptPrecentage(self, pre):
-    if pre > 32:
-      pre = 32
-    elif pre < 1:
-      pre = 1
-    pre = 32 - int(pre)
-    self.writeRegBits(MAX17043_CONFIG, pre, 0x01f, 0)
+  def setInterrupt(self, per):
+    if per > 32:
+      per = 32
+    elif per < 1:
+      per = 1
+    per = 32 - int(per)
+    self.writeRegBits(MAX17043_CONFIG, per, 0x01f, 0)
 
   def clearInterrupt(self):
     self.writeRegBits(MAX17043_CONFIG, 0, 0x01, 5)

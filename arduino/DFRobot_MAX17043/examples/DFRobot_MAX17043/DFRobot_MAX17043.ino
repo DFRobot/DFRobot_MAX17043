@@ -1,9 +1,9 @@
 /*
  * file DFRobot_MAX17043.ino
  *
- * connect lipo I2C interface with your board (please reference board compatibility)
+ * connect gauge I2C interface with your board (please reference board compatibility)
  * 
- * Voltage, precentage will be printed via serial.
+ * Voltage, percentage will be printed via serial.
  * Use API to config alaram and sleep (please reference to the readme in lib)
  *
  * Copyright   [DFRobot](http://www.dfrobot.com), 2016
@@ -17,12 +17,14 @@
 #include "Wire.h"
 
 #ifdef __AVR__
-  #define ALT_PIN       2
+  #define ALR_PIN       2
 #else
-  #define ALT_PIN       D2
+  #define ALR_PIN       D2
 #endif
 
-DFRobot_MAX17043        lipo;
+#define PRINT_INTERVAL        2000
+
+DFRobot_MAX17043        gauge;
 uint8_t       intFlag = 0;
 
 void interruptCallBack()
@@ -36,33 +38,37 @@ void setup()
   while(!Serial);
   Serial.println();
   Serial.println();
-  pinMode(ALT_PIN, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(ALT_PIN), interruptCallBack, FALLING);  //default alaram is 32%
+  pinMode(ALR_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(ALR_PIN), interruptCallBack, FALLING);  //default alaram is 32%
   
-  while(lipo.begin() != 0) {
-    Serial.println("lipo begin faild!");
+  while(gauge.begin() != 0) {
+    Serial.println("gauge begin faild!");
     delay(2000);
   }
   delay(2);
-  Serial.println("lipo begin successful!");
+  Serial.println("gauge begin successful!");
+  //gauge.setInterrupt(32);  //use this to modify alaram threshold as 1% - 32% (integer)
 }
 
 void loop()
 {
-  delay(2000);
-  Serial.println();
+  static unsigned long lastMillis = 0;
+  if((millis() - lastMillis) > PRINT_INTERVAL) {
+    Serial.println();
 
-  Serial.print("voltage: ");
-  Serial.print(lipo.readVoltage());
-  Serial.println(" mV");
+    Serial.print("voltage: ");
+    Serial.print(gauge.readVoltage());
+    Serial.println(" mV");
 
-  Serial.print("precentage: ");
-  Serial.print(lipo.readPrecentage());
-  Serial.println(" %");
+    Serial.print("precentage: ");
+    Serial.print(gauge.readPrecentage());
+    Serial.println(" %");
+  }
 
   if(intFlag == 1) {
-    lipo.clearInterrupt();
-    Serial.println("lipo interrupt call back");
     intFlag = 0;
+    gauge.clearInterrupt();
+    Serial.println("gauge interrupt call back");
+    //put your battery low power alert interrupt service routine here
   }
 }

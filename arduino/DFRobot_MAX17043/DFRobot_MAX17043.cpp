@@ -24,21 +24,19 @@ float DFRobot_MAX17043::readVoltage()
   return (1.25f * (float)(read16(MAX17043_VCELL) >> 4));
 }
 
-float DFRobot_MAX17043::readPrecentage()
+float DFRobot_MAX17043::readPercentage()
 {
-  uint16_t        pre = read16(MAX17043_SOC);
-  return (float)((pre >> 8) + 0.003906f * (pre & 0x00ff));
+  uint16_t        per = read16(MAX17043_SOC);
+  return (float)((per >> 8) + 0.003906f * (per & 0x00ff));
 }
 
-void DFRobot_MAX17043::setInterrupt(float pre)
+void DFRobot_MAX17043::setInterrupt(uint8_t per)
 {
   uint16_t        temp;
-  if(pre > 32.0f)
+  if(per > 32)
     temp = 32;
-  else if(pre < 1.0f)
+  else if(per < 1)
     temp = 1;
-  else
-    temp = (uint16_t)pre;
   temp = 32 - temp;
   writeRegBits(MAX17043_CONFIG, temp, 0x01f, 0);
 }

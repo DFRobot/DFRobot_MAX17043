@@ -5,7 +5,7 @@ for lithium-ion (Li+) batter-ies in handheld and portable equipment.
 
 ## DFRobot_MAX17043 Library for Arduino
 ---------------------------------------------------------
-Provides an Arduino library for reading and interpreting MAX17043 data over I2C.
+Provides an Arduino library for reading and interperting MAX17043 data over I2C.
 
 ## Table of Contents
 
@@ -20,8 +20,7 @@ Provides an Arduino library for reading and interpreting MAX17043 data over I2C.
 
 ## Installation
 
-To use this library download the zip file, uncompress it to a folder named DFRobot_MAX17043 in Arduino library.
-
+To use this library download the zip file, uncomperss it to a folder named DFRobot_MAX17043 in Arduino library.
 ## Methods
 
 ```C++
@@ -36,36 +35,38 @@ DFRobot_MAX17043();
 /*
  * @brief MAX17043 begin and test moudle
  *
- * @return MAX17043 object
+ * @return result:        0: successful
+ *                       -1: faild
+ * 
  */
 int begin();
 
 /*
- * @brief read battery voltage in mv
+ * @brief read battery voltage in mV
  *
- * @return voltage in mv
+ * @return voltage in mV
  */
 float readVoltage();
 
 /*
- * @brief read battery voltage in precentage
+ * @brief read battery voltage in percentage
  *
- * @return voltage in precentage
+ * @return voltage in percentage
  */
-float readPrecentage();
+float readPercentage();
 
 /*
  * @brief set MAX17043 interrput threshold
  *
- * @param pre       interrupt threshold
+ * @param per       interrupt threshold as %1 - 32% (integer)
  */
-void readVoltage(float pre);
+void setInterrupt(uint8_t per);
 
 /*
  * @brief clear MAX17043 interrupt
  *
  */
-void celarInterrupt();
+void clearInterrupt();
 
 /*
  * @brief set MAX17043 in sleep mode
@@ -83,11 +84,11 @@ void setWeakUp();
 
 ## Compatibility
 
-MCU                | Work Well | Work Wrong | Untested  | Remarks
------------------- | :----------: | :----------: | :---------: | -----
-FireBeetle-ESP32  |      √       |             |            | 
-FireBeetle-ESP8266  |      √       |             |            | 
-Arduino uno |       √      |             |            | 
+| MCU                | Work Well | Work Wrong | Untested | Remarks |
+| ------------------ | :-------: | :--------: | :------: | ------- |
+| FireBeetle-ESP32   | √         |            |          |
+| FireBeetle-ESP8266 | √         |            |          |
+| Arduino uno        | √         |            |          |
 
 ## History
 
@@ -96,3 +97,4 @@ Arduino uno |       √      |             |            |
 ## Credits
 
 Written by DFRobot, 2018. (Welcome to our [website](https://www.dfrobot.com/))
+

@@ -27,8 +27,8 @@ class DFRobot_MAX17043 {
 
     int         begin();
     float       readVoltage();
-    float       readPrecentage();
-    void        setInterrupt(float pre);
+    float       readPercentage();
+    void        setInterrupt(uint8_t per);
     void        clearInterrupt();
     void        setSleep();
     void        setWakeUp();
