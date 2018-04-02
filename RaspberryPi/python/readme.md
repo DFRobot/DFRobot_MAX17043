@@ -32,58 +32,58 @@ $> python readAndInt.py
 
 ```python
 
-'''
+#
  # @brief create MAX17043 object
  #
  # @return MAX17043 object
-'''
+#
 DFRobot_MAX17043();
 
-'''
+#
  # @brief MAX17043 begin and test moudle
  #
  # @return result:        0: successful
  #                       -1: faild
-'''
+#
 def begin();
 
-'''
+#
  # @brief read battery voltage in mV
  #
  # @return voltage in mV
-'''
+#
 def readVoltage();
 
-'''
+#
  # @brief read battery voltage in percentage
  #
  # @return voltage in percentage
-'''
+#
 def readPercentage();
 
-'''
+#
  # @brief set MAX17043 interrput threshold
  #
  # @param per       interrupt threshold as %1 - %32 (integer)
-'''
+#
 def setInterrupt(per);
 
-'''
+#
  # @brief clear MAX17043 interrupt
  # 
-'''
+#
 def clearInterrupt();
 
-'''
+#
  # @brief set MAX17043 in sleep mode
  # 
-'''
+#
 def setSleep();
 
-'''
+#
  # @brief weak up MAX17043
  # 
-'''
+#
 def setWeakUp();
 
 ```
