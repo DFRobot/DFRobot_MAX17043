@@ -39,7 +39,7 @@ void setup()
   Serial.println();
   Serial.println();
   pinMode(ALR_PIN, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(ALR_PIN), interruptCallBack, FALLING);  //default alaram is 32%
+  attachInterrupt(digitalPinToInterrupt(ALR_PIN), interruptCallBack, FALLING);  //default alert is 32%
   
   while(gauge.begin() != 0) {
     Serial.println("gauge begin faild!");
