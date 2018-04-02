@@ -68,7 +68,7 @@ void loop()
   if(intFlag == 1) {
     intFlag = 0;
     gauge.clearInterrupt();
-    Serial.println("gauge interrupt call back");
+    Serial.println("Low power alert interrupt!");
     //put your battery low power alert interrupt service routine here
   }
 }

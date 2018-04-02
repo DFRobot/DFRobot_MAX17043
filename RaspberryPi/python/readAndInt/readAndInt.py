@@ -12,7 +12,7 @@ GPIO.setup(7, GPIO.IN)
 
 def interruptCallBack(channel):
   gauge.clearInterrupt()
-  print('MAX17043 interrupt callback')
+  print('Low power alert interrupt!')
   #put your battery low power alert interrupt service routine here
   
 GPIO.add_event_detect(7, GPIO.FALLING, callback = interruptCallBack, bouncetime = 5)

@@ -6,7 +6,7 @@ gauge = DFRobot_MAX17043()
 
 def interruptCallBack(channel):
   gauge.clearInterrupt()
-  print('MAX17043 interrupt callback')
+  print('Low power alert interrupt!')
   #put your battery low power alert interrupt service routine here
 
 pin_irq = Pin(25, Pin.IN)

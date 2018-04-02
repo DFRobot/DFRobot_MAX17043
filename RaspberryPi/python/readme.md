@@ -36,7 +36,7 @@ $> python readAndInt.py
  *
  * @return MAX17043 object
 '''
-DFRobot_MAX17043();
+class DFRobot_MAX17043();
 
 '''
  * @brief MAX17043 begin and test moudle
