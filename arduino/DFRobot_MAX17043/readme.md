@@ -49,9 +49,9 @@ int begin();
 float readVoltage();
 
 /*
- * @brief read battery voltage in percentage
+ * @brief read battery remaining capacity in percentage
  *
- * @return voltage in percentage
+ * @return battery remaining capacity in percentage
  */
 float readPercentage();
 
