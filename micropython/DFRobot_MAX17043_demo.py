@@ -19,10 +19,10 @@ while rslt != 0:
   time.sleep(2)
   rslt = gauge.begin()
 
-#gauge.setInterrupt(32) #use this to modify alaram threshold as 1% - 32% (integer)
+#gauge.setInterrupt(32) #use this to modify alert threshold as 1% - 32% (integer)
 print('gauge begin successful')
 
 while True:
   time.sleep(2)
-  print('read voltage: ' + str(gauge.readVoltage()) + 'mV')
-  print('read percentage: ' + str(round(gauge.readPercentage(), 2)) + '%')
+  print('voltage: ' + str(gauge.readVoltage()) + 'mV')
+  print('percentage: ' + str(round(gauge.readPercentage(), 2)) + '%')

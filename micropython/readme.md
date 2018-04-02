@@ -1,4 +1,4 @@
-# DFRobot_MAX17043 Gravity：Lipo Battery Management Module
+# DFRobot_MAX17043 Gravity：3.7V Li Battery Fuel Gauge
 
 The MAX17043 is ultra-compact, low-cost,host-side fuel-gauge systems 
 for lithium-ion (Li+) batter-ies in handheld and portable equipment.

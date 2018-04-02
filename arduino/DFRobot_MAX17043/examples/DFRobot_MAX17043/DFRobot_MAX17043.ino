@@ -47,13 +47,14 @@ void setup()
   }
   delay(2);
   Serial.println("gauge begin successful!");
-  //gauge.setInterrupt(32);  //use this to modify alaram threshold as 1% - 32% (integer)
+  //gauge.setInterrupt(32);  //use this to modify alert threshold as 1% - 32% (integer)
 }
 
 void loop()
 {
   static unsigned long lastMillis = 0;
   if((millis() - lastMillis) > PRINT_INTERVAL) {
+    lastMillis = millis();
     Serial.println();
 
     Serial.print("voltage: ");
