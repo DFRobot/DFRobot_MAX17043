@@ -9,22 +9,23 @@ Provides an Raspberry pi library for reading and interperting MAX17043 data over
 
 ## Table of Contents
 
-# [Installation](#installation)
-# [Methods](#methods)
+* [Installation](#installation)
+* [Methods](#methods)
 
 ## Installation
 
 Download and install smbus library on Raspberry pi. Steps to install smbus are provided at:
 
-$> sudo apt-get install -y python-smbus
+$> sudo apt-get install -y python-smbus <br>
 $> sudo apt-get install -y i2c-tools
 
 Run the program:
 
 $> python DFRobot_MAX17043.py
+
 Run the demo:
 
-$> cd readAndInt.py
+$> cd readAndInt.py <br>
 $> python readAndInt.py
 
 ## Methods
@@ -36,7 +37,7 @@ $> python readAndInt.py
  #
  # @return MAX17043 object
 '''
-class DFRobot_MAX17043();
+DFRobot_MAX17043();
 
 '''
  # @brief MAX17043 begin and test moudle
