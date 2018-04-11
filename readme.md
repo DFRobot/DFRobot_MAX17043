@@ -2,6 +2,7 @@
 
 The MAX17043 is ultra-compact, low-cost,host-side fuel-gauge systems 
 for lithium-ion (Li+) batter-ies in handheld and portable equipment.
+hardwire:xxxxxxx
 
 ## DFRobot_MAX17043 Library for Arduino
 ---------------------------------------------------------

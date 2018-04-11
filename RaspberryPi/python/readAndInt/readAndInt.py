@@ -24,7 +24,7 @@ while rslt != 0:
   time.sleep(2)
   rslt = gauge.begin()
 
-#gauge.setInterrupt(32) #use this to modify alert threshold as 1% - 32% (integer)
+gauge.setInterrupt(32) #use this to modify alert threshold as 1% - 32% (integer)
 print('gauge begin successful')
   
 while True:
