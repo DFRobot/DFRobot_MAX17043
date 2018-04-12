@@ -11,6 +11,7 @@ interrupt alert threshold is 32%, this threshold can be set by the function setI
 
 When connecting , it is necessary to pay attention to the correspondence among pins, the connection diagram is as fellows.
 <br>
+
 Li Battery Fuel Gaugeauge 
 <br>
 <img src="./image/2.jpg">
