@@ -8,9 +8,11 @@ battery power alert interrupt function.  When the battery power falls below spec
 pluse to trigger the external interrupt of the controller.One thing should mention that the default value of the battery low power
 interrupt alert threshold is 32%, this threshold can be set by the function setInterrupt().
 <br>
+-
 When connecting it to Raspberry Pi, it is necessary to pay attention to the correspondence between BCM, wPi, board.About other 
 boards can be connected according to the correspondence.
 <br>
+-
 <img src="./image/timg.jpg">
 
 ## DFRobot_MAX17043 Library for Arduino
