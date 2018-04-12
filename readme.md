@@ -8,7 +8,8 @@ battery power alert interrupt function.  When the battery power falls below spec
 pluse to trigger the external interrupt of the controller.One thing should mention that the default value of the battery low power
 interrupt alert threshold is 32%, this threshold can be set by the function setInterrupt().
 Next, the connection method is introduced.
-<img src="time.jpg">
+<br>
+<img src="./src/timg.jpg">
 
 ## DFRobot_MAX17043 Library for Arduino
 ---------------------------------------------------------
