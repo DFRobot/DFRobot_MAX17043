@@ -9,11 +9,26 @@ pluse to trigger the external interrupt of the controller.One thing should menti
 interrupt alert threshold is 32%, this threshold can be set by the function setInterrupt().
 <br>
 
-When connecting it to Raspberry Pi, it is necessary to pay attention to the correspondence between BCM, wPi, board. About other 
-boards can be connected according to the correspondence.
+When connecting , it is necessary to pay attention to the correspondence among pins, the connection diagram is as fellows.
+<br>
+<img src="./image/2.jpg">
 <br>
 
-<img src="./image/timg.jpg">
+Raspberry Pi
+<br>
+<img src="./image/1.jpg">
+<br>
+
+Arduino UNO
+<br>
+<img src="./image/3.jpg">
+<br>
+
+ESP32
+<br>
+<img src="./image/4.jpg">
+
+
 
 ## DFRobot_MAX17043 Library for Arduino
 ---------------------------------------------------------
