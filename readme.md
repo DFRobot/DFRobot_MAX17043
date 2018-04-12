@@ -30,7 +30,9 @@ Arduino UNO
 ESP32
 <br>
 <img src="./image/4.jpg">
+<br>
 
+Wires of the same color are linked together,and We only exemplify how these three boards are connected to the Fuel Gauge.
 
 
 
