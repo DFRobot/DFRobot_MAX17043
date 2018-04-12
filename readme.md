@@ -9,7 +9,7 @@ pluse to trigger the external interrupt of the controller.One thing should menti
 interrupt alert threshold is 32%, this threshold can be set by the function setInterrupt().
 Next, the connection method is introduced.
 <br>
-<img src="./time.jpg">
+<img src="./timg.jpg">
 
 ## DFRobot_MAX17043 Library for Arduino
 ---------------------------------------------------------
