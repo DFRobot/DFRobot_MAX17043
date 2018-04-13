@@ -1,13 +1,7 @@
 /*
  * file DFRobot_MAX17043.ino
  *
- *  The MAX17043 is ultra-compact, low-cost,host-side fuel-gauge systems for lithium-ion (Li+) batter-ies in handheld and portable 
- *equpiment.It employs Gravity I2C interface,ultra-low opearting current, and real-time tracking of the relative state of charge 
- *(SOC) of the battery through Maxim's patented algorithm,eliminating the need for full-to-empty relearning and offset accumualtion 
- *errors.Plug and play to accurately measure the voltage and remaining power of the battery. The module  also features as a low 
- *battery power alert interrupt function.  When the battery power falls below specified threshold, the ALR pin generates a falling 
- *pluse to trigger the external interrupt of the controller.One thing should mention that the default value of the battery low power
- *interrupt alert threshold is 32%, this threshold can be set by the function setInterrupt().
+ * connect gauge I2C interface with your board (please reference board compatibility)
  * 
  * Voltage, percentage will be printed via serial.
  * Use API to config alaram and sleep (please reference to the readme in lib)
@@ -45,7 +39,7 @@ void setup()
   Serial.println();
   Serial.println();
   pinMode(ALR_PIN, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(ALR_PIN), interruptCallBack, FALLING);  //default alert is 32%
+  attachInterrupt(ALR_PIN, interruptCallBack, FALLING);  //default alert is 32%
   
   while(gauge.begin() != 0) {
     Serial.println("gauge begin faild!");

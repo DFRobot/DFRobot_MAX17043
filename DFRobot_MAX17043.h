@@ -37,7 +37,6 @@ class DFRobot_MAX17043 {
     //!!!     little ending
     void write16(uint8_t reg, uint16_t dat) {
       Wire.begin();
-      Wire.setClock(400000);
       Wire.beginTransmission(MAX17043_ADDRESS);
       Wire.write(reg);
       Wire.write(dat >> 8);
@@ -48,7 +47,6 @@ class DFRobot_MAX17043 {
     uint16_t read16(uint8_t reg) {
       uint16_t        temp;
       Wire.begin();
-      Wire.setClock(400000);
       Wire.beginTransmission(MAX17043_ADDRESS);
       Wire.write(reg);
       Wire.endTransmission();
