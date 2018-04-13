@@ -12,25 +12,21 @@ threshold is 32%, this threshold can be set by the function setInterrupt().
 When connecting , it is necessary to pay attention to the correspondence among pins, the connection diagram is as fellows.
 <br>
 
-Li Battery Fuel Gaugeauge 
+* Arduino UNO
+<br>
+<img src="./image/1.jpg">
+<br>
+
+* ESP32
 <br>
 <img src="./image/2.jpg">
 <br>
 
 * Raspberry Pi
 <br>
-<img src="./image/1.jpg">
-<br>
-
-* Arduino UNO
-<br>
 <img src="./image/3.jpg">
 <br>
 
-* ESP32
-<br>
-<img src="./image/4.jpg">
-<br>
 
 Wires of the same color are linked together,and We only exemplify how these three boards are connected to the Fuel Gauge.
 
