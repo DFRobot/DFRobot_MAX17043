@@ -8,6 +8,24 @@ battery power alert interrupt function.  When the battery power falls below spec
 pluse to trigger the external interrupt of the controller.One thing should mention that the default value of the battery low power
 interrupt alert threshold is 32%, this threshold can be set by the function setInterrupt().
 
+When connecting , it is necessary to pay attention to the correspondence among pins, the connection diagram is as fellows.
+<br>
+
+* Arduino UNO
+<br>
+<img src="./image/UNO.jpg">
+<br>
+
+* ESP32
+<br>
+<img src="./image/esp32.jpg">
+<br>
+
+* Raspberry Pi
+<br>
+<img src="./image/Raspberry Pi.jpg">
+<br>
+
 ## DFRobot_MAX17043.py Library for Raspberry pi
 ---------------------------------------------------------
 Provides an Raspberry pi library for reading and interperting MAX17043 data over I2C.

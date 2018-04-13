@@ -1,5 +1,10 @@
 # DFRobot_MAX17043 Gravity：3.7V Li Battery Fuel Gauge
 
+<br>
+<img src="./image/Fuel gauge.jpg">
+<br>
+
+
    The MAX17043 is ultra-compact, low-cost,host-side fuel-gauge systems for lithium-ion (Li+) batter-ies in handheld and portable 
 equipment.It employs Gravity I2C interface,ultra-low opearting current, and real-time tracking of the relative state of charge (SOC) 
 of the battery through Maxim's patented algorithm,eliminating the need for full-to-empty relearning and offset accumualtion errors. 
@@ -14,17 +19,17 @@ When connecting , it is necessary to pay attention to the correspondence among p
 
 * Arduino UNO
 <br>
-<img src="./image/1.jpg">
+<img src="./image/UNO.jpg">
 <br>
 
 * ESP32
 <br>
-<img src="./image/2.jpg">
+<img src="./image/esp32.jpg">
 <br>
 
 * Raspberry Pi
 <br>
-<img src="./image/3.jpg">
+<img src="./image/Raspberry Pi.jpg">
 <br>
 
 
