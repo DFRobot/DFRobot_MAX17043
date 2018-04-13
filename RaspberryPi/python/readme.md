@@ -11,10 +11,7 @@ interrupt alert threshold is 32%, this threshold can be set by the function setI
 When connecting , it is necessary to pay attention to the correspondence among pins, the connection diagram is as fellows.
 <br>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> de8df48c84639856ec22652bebe4000bc71d381d
 * Raspberry Pi
 <br>
 <img src="./image/Raspberry Pi.jpg">
