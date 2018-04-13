@@ -17,17 +17,17 @@ Li Battery Fuel Gaugeauge
 <img src="./image/2.jpg">
 <br>
 
-Raspberry Pi
+*Raspberry Pi
 <br>
 <img src="./image/1.jpg">
 <br>
 
-Arduino UNO
+*Arduino UNO
 <br>
 <img src="./image/3.jpg">
 <br>
 
-ESP32
+*ESP32
 <br>
 <img src="./image/4.jpg">
 <br>
