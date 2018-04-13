@@ -11,19 +11,10 @@ interrupt alert threshold is 32%, this threshold can be set by the function setI
 When connecting , it is necessary to pay attention to the correspondence among pins, the connection diagram is as fellows.
 <br>
 
-* Arduino UNO
-<br>
-<img src="./image/UNO.jpg">
-<br>
 
 * ESP32
 <br>
 <img src="./image/esp32.jpg">
-<br>
-
-* Raspberry Pi
-<br>
-<img src="./image/Raspberry Pi.jpg">
 <br>
 
 
