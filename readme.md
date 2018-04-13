@@ -1,12 +1,12 @@
 # DFRobot_MAX17043 Gravity：3.7V Li Battery Fuel Gauge
 
    The MAX17043 is ultra-compact, low-cost,host-side fuel-gauge systems for lithium-ion (Li+) batter-ies in handheld and portable 
-equpiment.It employs Gravity I2C interface,ultra-low opearting current, and real-time tracking of the relative state of charge 
-(SOC) of the battery through Maxim's patented algorithm,eliminating the need for full-to-empty relearning and offset accumualtion 
-errors.Plug and play to accurately measure the voltage and remaining power of the battery. The module  also features as a low 
-battery power alert interrupt function.  When the battery power falls below specified threshold, the ALR pin generates a falling 
-pluse to trigger the external interrupt of the controller.One thing should mention that the default value of the battery low power
-interrupt alert threshold is 32%, this threshold can be set by the function setInterrupt().
+equpiment.It employs Gravity I2C interface,ultra-low opearting current, and real-time tracking of the relative state of charge (SOC) 
+of the battery through Maxim's patented algorithm,eliminating the need for full-to-empty relearning and offset accumualtion errors. 
+Plug and play to accurately measure the voltage and remaining power of the battery. The module  also features as a low battery power
+alert interrupt function.  When the battery power falls below specified threshold, the ALR pin generates a falling pluse to trigger 
+the external interrupt of the controller.One thing should mention that the default value of the battery low power interrupt alert 
+threshold is 32%, this threshold can be set by the function setInterrupt().
 <br>
 
 When connecting , it is necessary to pay attention to the correspondence among pins, the connection diagram is as fellows.
@@ -17,17 +17,17 @@ Li Battery Fuel Gaugeauge
 <img src="./image/2.jpg">
 <br>
 
-Raspberry Pi
+* Raspberry Pi
 <br>
 <img src="./image/1.jpg">
 <br>
 
-Arduino UNO
+* Arduino UNO
 <br>
 <img src="./image/3.jpg">
 <br>
 
-ESP32
+* ESP32
 <br>
 <img src="./image/4.jpg">
 <br>
