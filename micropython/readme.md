@@ -16,8 +16,9 @@ When connecting , it is necessary to pay attention to the correspondence among p
 
 >>>>>>> de8df48c84639856ec22652bebe4000bc71d381d
 * ESP32
+
 <br>
-<img src="./image/esp32.jpg">
+<img src="..//..//image/esp32.jpg">
 <br>
 
 

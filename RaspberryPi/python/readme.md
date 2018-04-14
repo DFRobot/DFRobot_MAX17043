@@ -14,7 +14,7 @@ When connecting , it is necessary to pay attention to the correspondence among p
 
 * Raspberry Pi
 <br>
-<img src="./image/Raspberry Pi.jpg">
+<img src="..//..//image/Raspberry Pi.jpg">
 <br>
 
 ## DFRobot_MAX17043.py Library for Raspberry pi
