@@ -1,8 +1,11 @@
 import time
-from machine import Pin
+from machine import I2C, Pin
 from DFRobot_MAX17043 import DFRobot_MAX17043
 
-gauge = DFRobot_MAX17043()
+# Get I2C bus
+i2c = I2C(scl = Pin(22), sda = Pin(21), freq=400000)
+
+gauge = DFRobot_MAX17043(i2c)
 
 def interruptCallBack(channel):
   gauge.clearInterrupt()

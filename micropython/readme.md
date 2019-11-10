@@ -39,7 +39,7 @@ To use this library download the zip file, uncomperss it to a folder named DFRob
  #
  # @return MAX17043 object
 #
-DFRobot_MAX17043();
+DFRobot_MAX17043(i2c);
 
 #
  # @brief MAX17043 begin and test moudle
