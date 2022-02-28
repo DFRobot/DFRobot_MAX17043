@@ -93,7 +93,7 @@ To use this library download the zip file, uncomperss it to a folder named DFRob
 
 ## History
 
-- 2018/04/14 - Version 1.0 released.
+- 2018/04/14 - Version 1.0.0 released.
 
 ## Credits
 

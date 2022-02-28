@@ -121,7 +121,7 @@ python2 demo_read_and_int.py.py
 
 ## History
 
-- 2018/04/14 - Version 1.0 released.
+- 2018/04/14 - Version 1.0.0 released.
 
 ## Credits
 
