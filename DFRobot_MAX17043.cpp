@@ -1,3 +1,14 @@
+/*!
+ * @file DFRobot_MAX17043.cpp
+ *
+ * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+ * @license     The MIT License (MIT)
+ * @author [ouki.wang](ouki.wang@dfrobot.com)
+ * @version  V1.0
+ * @date  2018-4-14
+ * @url https://github.com/DFRobot/DFRobot_MAX17043
+ */
+
 #include "DFRobot_MAX17043.h"
 
 DFRobot_MAX17043::DFRobot_MAX17043() {}

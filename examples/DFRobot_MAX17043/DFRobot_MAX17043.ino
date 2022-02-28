@@ -1,16 +1,15 @@
-/*
- * file DFRobot_MAX17043.ino
+/*!
+ * @file DFRobot_MAX17043.ino
+ * @brief connect gauge I2C interface with your board (please reference board compatibility)
+ * @n Voltage, percentage will be printed via serial.
+ * @n Use API to config alaram and sleep (please reference to the readme in lib)
  *
- * connect gauge I2C interface with your board (please reference board compatibility)
- * 
- * Voltage, percentage will be printed via serial.
- * Use API to config alaram and sleep (please reference to the readme in lib)
- *
- * Copyright   [DFRobot](http://www.dfrobot.com), 2016
- * Copyright   GNU Lesser General Public License
- *
- * version  V1.0
- * date  2018-3-26
+ * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+ * @license     The MIT License (MIT)
+ * @author [ouki.wang](ouki.wang@dfrobot.com)
+ * @version  V1.0
+ * @date  2018-4-14
+ * @url https://github.com/DFRobot/DFRobot_MAX17043
  */
 
 #include "DFRobot_MAX17043.h"

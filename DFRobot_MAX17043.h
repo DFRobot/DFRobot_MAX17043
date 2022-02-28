@@ -1,3 +1,14 @@
+/*!
+ * @file DFRobot_MAX17043.h
+ *
+ * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+ * @license     The MIT License (MIT)
+ * @author [ouki.wang](ouki.wang@dfrobot.com)
+ * @version  V1.0
+ * @date  2018-4-14
+ * @url https://github.com/DFRobot/DFRobot_MAX17043
+ */
+
 #ifndef __DFROBOT_MAX17043_H
 #define __DFROBOT_MAX17043_H
 
@@ -22,19 +33,61 @@
 #define MAX17043_COMMAND        0xfe
 
 class DFRobot_MAX17043 {
-  public:
-    DFRobot_MAX17043();
-
-    int         begin();
-    float       readVoltage();
-    float       readPercentage();
-    void        setInterrupt(uint8_t per);
-    void        clearInterrupt();
-    void        setSleep();
-    void        setWakeUp();
+public:
+  /**
+   * @fn DFRobot_MAX17043
+   * @brief create MAX17043 object
+   * @return MAX17043 object
+   */
+  DFRobot_MAX17043();
+  /**
+   * @fn begin
+   * @brief MAX17043 begin and test moudle
+   *
+   * @return initialization result
+   * @retval  0     successful
+   * @retval -1     faild
+   */
+  int         begin();
+  /**
+   * @fn readVoltage
+   * @brief read battery voltage in mV
+   * @return voltage in mV
+   */
+  float       readVoltage();
+  /**
+   * @fn readPercentage
+   * @brief read battery remaining capacity in percentage
+   *
+   * @return battery remaining capacity in percentage
+   */
+  float       readPercentage();
+  /**
+   * @fn setInterrupt
+   * @brief set MAX17043 interrput threshold
+   *
+   * @param per       interrupt threshold as %1 - 32% (integer)
+   */
+  void        setInterrupt(uint8_t per);
+  /**
+   * @fn clearInterrupt
+   * @brief clear MAX17043 interrupt
+   */
+  void        clearInterrupt();
+  /**
+   * @fn setSleep
+   * @brief set MAX17043 in sleep mode
+   *
+   */
+  void        setSleep();
+  /**
+   * @fn setWakeUp
+   * @brief weak up MAX17043
+   *
+   */
+  void        setWakeUp();
 
   private:
-    //!!!     little ending
     void write16(uint8_t reg, uint16_t dat) {
       Wire.begin();
       Wire.beginTransmission(MAX17043_ADDRESS);
